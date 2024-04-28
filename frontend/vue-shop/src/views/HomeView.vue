@@ -46,6 +46,7 @@ section {
 
 article {
   display: flex;
-  width: 50%;
+  flex-grow: 1;
+  /* width: 50%; */
 }
 </style>

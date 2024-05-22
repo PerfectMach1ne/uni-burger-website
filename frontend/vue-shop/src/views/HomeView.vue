@@ -3,50 +3,45 @@
 </script>
 
 <template>
-  <main>
+  <section class="top-section">
+    <div class="food-slideshow">
 
-    <h1>Burger Website front page</h1>
+    </div>
+    <div class="top-section-buttons">
 
-    <section>
-      <article> <!-- central box, left side -->
-        burger and other food ()
-      </article>
+    </div>
+  </section>
 
-      <article :style="{ 'border-left': '3px solid orangered' }"> <!-- central box, right side-->
-        <button>
-          Order now
-        </button>
+  <section class="map-section">
+    <div class="map-picture">
 
-        <button>
-          See menu
-        </button>
-      </article>
-    </section>
-    <section> <!-- Bottom box -->
-      Info about restaurant location
-    </section>
+    </div>
+    <div class="location-info">
 
-  </main>
+    </div>
+  </section>
 </template>
 
 <style>
-main {
+section.top-section,
+section.map-section {
   display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-}
-
-section {
-  display: flex;
-  border: 3px solid orangered;
-  min-width: 60%;
   flex-direction: row;
+  justify-content: flex-start;
+  align-content: flex-start;
+  gap: 10px;
+
+  border: 1px solid orangered;
+  padding: 15px;
 }
 
-article {
-  display: flex;
-  flex-grow: 1;
-  /* width: 50%; */
+div.food-slideshow,
+div.top-section-buttons, 
+div.map-picture, 
+div.location-info {
+  flex: 50%;
+
+  border: 1px solid red;
+  padding: 15px;
 }
 </style>

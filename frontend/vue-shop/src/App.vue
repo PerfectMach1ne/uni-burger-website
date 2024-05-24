@@ -82,7 +82,7 @@ main.main-wrapper {
   align-content: center;
   align-items: center;
 
-  border: 1px solid black;
+  border: 3px solid black;
   padding: 15px;
 }
 
@@ -90,7 +90,7 @@ main.main-wrapper > div.router-view {
   /* flex: 2 1 70%; */
   min-width: 70%;
 
-  border: 1px solid orange;
+  border: 3px solid orange;
   padding: 15px;
 }
 </style>

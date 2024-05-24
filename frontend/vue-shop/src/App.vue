@@ -50,7 +50,8 @@ header.header-wrapper {
   border: 1px solid black;
 }
 
-div.login-panel {
+div.login-panel,
+div.menu-wrapper {
   display: flex;
   justify-content: center;
   align-content: center;
@@ -67,6 +68,7 @@ div.login-panel > button#login-button {
 div.title-wrapper {
   display: flex;
   flex-direction: row;
+  align-items: center;
   gap: 20px;
 
   border: 1px solid black;

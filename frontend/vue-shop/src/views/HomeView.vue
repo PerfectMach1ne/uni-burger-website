@@ -14,7 +14,7 @@
 
   <section class="map-section">
     <div class="map-picture">
-
+      <img src="../assets/map-asset.png" alt="An asset representing a map.">
     </div>
     <div class="location-info">
 

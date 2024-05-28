@@ -27,10 +27,12 @@ export default {
     </div>
 
     <div class="menu-wrapper">
-      <RouterLink to="/">Home</RouterLink>
-      <RouterLink to="/menu">Menu</RouterLink>
-      <RouterLink to="/order">Order</RouterLink>
-      <RouterLink to="/about">About</RouterLink>
+      <menu>
+        <li><RouterLink to="/"><button id="router-button">Home</button></RouterLink></li>
+        <li><RouterLink to="/menu"><button id="router-button">Menu</button></RouterLink></li>
+        <li><RouterLink to="/order"><button id="router-button">Order</button></RouterLink></li>
+        <li><RouterLink to="/about"><button id="router-button">About</button></RouterLink></li>
+      </menu>
     </div>
   </header>
 
@@ -42,10 +44,42 @@ export default {
 </template>
 
 <style>
+* {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+h2 {
+  font-size: 2.8rem;
+}
+
+h3 {
+  font-size: 2.3rem;
+}
+
+h4 {
+  font-size: 2rem;
+}
+
+h5 {
+  font-size: 1.8rem;
+}
+
+h6 {
+  font-size: 1.5rem;
+}
+
+p {
+  font-size: 1.2rem;
+}
+
 header.header-wrapper {
   display: flex;
   justify-content: space-between;
-  align-content: center;
+  align-items: center;
   
   border: 1px solid black;
 }
@@ -62,7 +96,9 @@ div.menu-wrapper {
 }
 
 div.login-panel > button#login-button {
-  /* oo aa */
+  border: 3px solid orange;
+  padding: 15px;
+  margin: 5px;
 }
 
 div.title-wrapper {
@@ -75,14 +111,30 @@ div.title-wrapper {
   padding: 15px;
 }
 
+div.menu-wrapper > menu {
+  display: inline-block;
+  padding: 0;
+  list-style-type: none;
+}
+
+div.menu-wrapper > menu > li {
+  margin: 5px;
+  float: left;
+}
+
+button#router-button {
+  border: 3px solid orange;
+  padding: 15px;
+}
+
 main.main-wrapper {
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: space-between;
   align-content: center;
   align-items: center;
 
-  border: 3px solid black;
+  border: 1px solid black;
   padding: 15px;
 }
 

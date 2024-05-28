@@ -1,3 +1,7 @@
+<script setup>
+import { RouterLink } from 'vue-router';
+</script>
+
 <script>
 
 </script>
@@ -12,8 +16,8 @@
       <button>></button>
     </div>
     <div class="top-section-buttons">
-      <button>Zamów teraz!</button>
-      <button>Nasze menu</button>
+      <RouterLink to="/order"><button>Zamów teraz!</button></RouterLink>
+      <RouterLink to="/menu"><button>Nasze menu</button></RouterLink>
     </div>
   </section>
 
@@ -22,11 +26,14 @@
       <img src="../assets/map-asset.png" alt="An asset representing a map.">
     </div>
     <div class="location-info">
-      <p>Tekst przykładowy 1</p>
-      <p>Tekst przykładowy 2</p>
-      <p>Tekst przykładowy 3</p>
-      <p>Tekst przykładowy 4</p>
-      <p>Tekst przykładowy 5</p>
+      <div class="location-info-item">
+        <h4>Ulica:</h4>
+        <h4>ul. Restauracjowa 57, Lublin</h4>
+      </div>
+      <div class="location-info-item">
+        <h4>Telefon:</h4>
+        <h4>+48 777 888 999</h4>
+      </div>
     </div>
   </section>
 </template>
@@ -61,6 +68,11 @@ div.location-info {
 div.top-section-buttons,
 div.location-info {
   flex-direction: column;
-  align-items: flex-start;
+  align-items: stretch;
+}
+
+div.location-info-item {
+  display: flex;
+  justify-content: space-between;
 }
 </style>

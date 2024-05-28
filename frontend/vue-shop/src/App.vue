@@ -82,6 +82,7 @@ header.header-wrapper {
   align-items: center;
   
   border: 1px solid black;
+  padding: 15px;
 }
 
 div.login-panel,

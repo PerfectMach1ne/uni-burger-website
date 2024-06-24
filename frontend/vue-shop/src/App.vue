@@ -1,18 +1,8 @@
 <script setup>
+import { ref } from 'vue';
 import { RouterLink, RouterView } from 'vue-router';
-</script>
 
-<script>
-export default {
-  data() {
-    return {
-      isLoggedIn: false
-    }
-  },
-  created() {
-    // console.log(this.isLoggedIn);
-  }
-}
+const isLoggedIn = ref(true);
 </script>
 
 <template>
@@ -37,8 +27,13 @@ export default {
   </header>
 
   <main class="main-wrapper">
-    <div class="router-view">
-      <RouterView />
+    <div class="router-view-wrapper">
+      <div class="login-popup">
+        <LoginPopup v-if="isLoggedIn"></LoginPopup>
+      </div>
+      <div class="router-view">
+        <RouterView />
+      </div>
     </div>
   </main>
 </template>
@@ -121,6 +116,7 @@ div.menu-wrapper > menu {
 div.menu-wrapper > menu > li {
   margin: 5px;
   float: left;
+  z-index: auto;
 }
 
 button#router-button {
@@ -139,11 +135,26 @@ main.main-wrapper {
   padding: 15px;
 }
 
-main.main-wrapper > div.router-view {
-  /* flex: 2 1 70%; */
-  min-width: 70%;
+main.main-wrapper > div.router-view-wrapper {
+  /* min-width: 70%; */
+  width: 70%;
 
   border: 3px solid orange;
   padding: 15px;
+}
+
+main.main-wrapper > div.router-view {
+  min-width: max-content;
+  z-index: 0;
+}
+
+main.main-wrapper > div.login-popup {
+  /* z-index: 1; */
+  z-index: 1;
+
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
 }
 </style>

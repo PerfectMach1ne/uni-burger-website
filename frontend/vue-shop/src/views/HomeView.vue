@@ -1,19 +1,16 @@
 <script setup>
 import { RouterLink } from 'vue-router';
-</script>
-
-<script>
 
 </script>
 
 <template>
   <section class="top-section">
     <div class="food-slideshow">
-      <button><</button>
+      <button @click=""><</button>
       <div id="picture-slideshow">
         <img src="" alt="Image slideshow.">
       </div>
-      <button>></button>
+      <button click="">></button>
     </div>
     <div class="top-section-buttons">
       <RouterLink to="/order"><button>Zamów teraz!</button></RouterLink>
@@ -38,7 +35,11 @@ import { RouterLink } from 'vue-router';
   </section>
 </template>
 
-<style>
+<style scoped>
+* {
+  min-width: max-content;
+}
+
 section.top-section,
 section.map-section {
   display: flex;
